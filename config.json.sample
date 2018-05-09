@@ -1,0 +1,72 @@
+[
+{
+	"description": "Cold storage",
+		"url": "pca://duplicity_cold",
+		"env": [
+		{
+			"name": "PCA_AUTHURL",
+			"value": "https://auth.cloud.ovh.net/v3"
+		},
+		{
+			"name": "PCA_AUTHVERSION",
+			"value": "3"
+		},
+		{
+			"name": "PCA_PROJECT_DOMAIN_NAME",
+			"value": "Default"
+		},
+		{
+			"name": "PCA_TENANTID",
+			"value": "<your_tenant_id>"
+		},
+		{
+			"name": "PCA_USERNAME",
+			"value": "<your_username>"
+		},
+		{
+			"name": "PCA_PASSWORD",
+			"value": "<your_password>"
+		},
+		{
+			"name": "PCA_REGIONNAME",
+			"value": "<region_name>"
+		}
+	],
+	"prefixes": ["cold_"]
+},
+{
+	"description": "Hot storage",
+	"url": "swift://duplicity_hot",
+	"env": [
+	{
+		"name": "SWIFT_AUTHURL",
+		"value": "https://auth.cloud.ovh.net/v3"
+	},
+	{
+		"name": "SWIFT_AUTHVERSION",
+		"value": "3"
+	},
+	{
+		"name": "SWIFT_PROJECT_DOMAIN_NAME",
+		"value": "Default"
+	},
+	{
+		"name": "SWIFT_TENANTID",
+		"value": "<your_tenant_id>"
+	},
+	{
+		"name": "SWIFT_USERNAME",
+		"value": "<your_username>"
+	},
+	{
+		"name": "SWIFT_PASSWORD",
+		"value": "<your_password>"
+	},
+	{
+		"name": "SWIFT_REGIONNAME",
+		"value": "<region_name>"
+	}
+	],
+	"prefixes": ["hot_"]
+}
+]
