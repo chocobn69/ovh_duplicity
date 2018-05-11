@@ -7,7 +7,7 @@ do_backup() {
 	      -v $PWD/config.json:/home/duplicity/config.json:ro \
 	      -v $1:/data:ro \
 	      duplicity:latest \
-	      duplicity \
+	      trickle -u $2 -d $3 -s duplicity \
 	        --file-prefix-manifest 'hot_' \
 		--file-prefix-signature 'hot_' \
 		--file-prefix-archive 'cold_' \
@@ -22,4 +22,4 @@ _print() { printf "\e[1m%s\e[0m\n" "$1"; }
 _print 'Starting backup'
 
 _print 'Backup datas'
-do_backup /home/choco/datas
+do_backup /home/choco/datas 3000 3000

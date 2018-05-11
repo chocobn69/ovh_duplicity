@@ -10,7 +10,8 @@ RUN set -x \
 		librsync-dev \
 		python \
 		python-dev \
-		python-pip
+		python-pip \
+		trickle
 RUN set -x \
 	&& mkdir /duplicity && cd /duplicity \
 	&& bzr branch lp:duplicity \
